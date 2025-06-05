@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures?</title>
+</head>
+<body>
+    <script>
+        function factor(times){
+            function multiplier(num){
+                return num*times;
+            }
+            return multiplier;
+        }
+        let timesTwo = factor(2);
+        let ans = timesTwo(5);
+        alert(ans);
+    </script>
+</body>
+</html>
